@@ -56,15 +56,13 @@ function getValue() {
   
 }
 ```
-##### Q.console.logの値は？
+Q.console.logの値は？
 
 ---
 
 ### 答え
 
 ##### A.未定義
-
-###### なぜ？
 
 javascriptではローカル変数は「関数全体で有効」
 `console.log(scope)`の時点ではローカル変数scopeが有効になっているが、ローカル変数が確保されているだけで、var命令は実行されていない。
@@ -73,44 +71,44 @@ javascriptではローカル変数は「関数全体で有効」
 
 このような挙動が不具合の原因となるので避けるべき...！
 
-###### どうする？
-ローカル変数は関数の銭湯で宣言する
+---
 
+### 仮引数のスコープ(基本型と参照型に違い)
 
-##### Q.console.logの値は？
+基本型
+```js
+var value = 10
+
+function decrementValue(value) {
+  value--;
+  return value;
+}
+
+console.log(value); //10
+decrementValue(100) //99
+```
 
 ---
 
-### ローカル変数の有効範囲は？
+### 仮引数のスコープ(基本型と参照型に違い)
+
+参照型（配列、オブジェクト、関数）
 
 ```js
+var value = [1,2,4,8,16]
 
-var scope = "Global" 　
-
-function getValue() {
-  console.log(scope) 
-  var scope = "local Variable";
-  return scope;
-  
+function decrementValue(value) {
+  value.pop(); //末尾の要素を削除
+  return value;
 }
+
+console.log(value)　//　①
+decrementValue(value) //　②
+console.log(value); //　③
 ```
-##### Q.console.logの値は？
 
----
+Q. それぞれの①、②、③の値は？
 
-### ローカル変数の有効範囲は？
-
-```js
-
-var scope = "Global" 　
-
-function getValue() {
-  console.log(scope) 
-  var scope = "local Variable";
-  return scope;
-  
-}
-```
 ##### Q.console.logの値は？
 
 ---
