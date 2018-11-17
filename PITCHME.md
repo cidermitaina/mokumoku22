@@ -111,5 +111,53 @@ Q. それぞれの①、②、③の値は？
 
 ---
 
+### 答え
+
+a. ①：1,2,4,8,16
+   ②：1,4,8
+   ③：1,4,8
+
+参照型とは、値そのものではなく、値を格納したメモリ上の場所（アドレス）だけを格納している型
+
+参照型の値を受け渡しをする場合、渡される値もメモリ上のアドレス情報だけとなる。（参照渡し）
+
+---
+
+### jQueryに頼らない
+
+
+
+#### id, classで取得
+
+idで取得
+
+```js
+$('#main')
+```
+
+```js
+document.getElementById('main')
+```
+タグで取得
+
+```js
+$('div')
+```
+
+```js
+document.getElementsByTagName('div')
+```
+
+classで取得
+
+```js
+$('.main')
+```
+```js
+document.getElementsByClassName('main')
+```
+
+---
+
 
 ### おわり
