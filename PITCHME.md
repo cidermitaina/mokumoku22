@@ -202,7 +202,7 @@ $(".item").css("font-size", "1.5rem");
 ```js
 var item = document.querySelector(".item");
 
-item.style.fontSize = "24px";
+item.style.fontSize = "1.5rem";
 ```
 
 ---
