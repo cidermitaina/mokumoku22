@@ -1,4 +1,4 @@
-## check-out
+## check-out✨
 
 #### 今日やったこと
 
