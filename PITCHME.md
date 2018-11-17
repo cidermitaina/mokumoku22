@@ -42,7 +42,7 @@ function getValue() {
 
 ---
 
-### ローカル変数の有効範囲は？
+### ローカル変数の有効範囲
 
 ```js
 
@@ -52,7 +52,6 @@ function getValue() {
   console.log(scope) 
   var scope = "local Variable";
   return scope;
-  
 }
 ```
 Q.console.logの値は？
@@ -68,7 +67,6 @@ javascriptではローカル変数は「関数全体で有効」
 
 つまり`未定義`
 
-このような挙動が不具合の原因となるので避けるべき...！
 
 ---
 
@@ -112,7 +110,7 @@ Q. それぞれの①、②、③の値は？
 
 ### 答え
 
-##### a. ①：1,2,4,8,16　 ②：1,4,8　 ③：1,4,8
+##### a. ①：1, 2, 4, 8, 16　 ②：1, 4, 8　 ③：1, 4, 8
 
 参照型とは、値そのものではなく、値を格納したメモリ上の場所（アドレス）だけを格納している型
 
@@ -129,7 +127,6 @@ idで取得
 ```js
 $('#main')
 ```
-
 ```js
 document.getElementById('main')
 ```
@@ -138,10 +135,14 @@ document.getElementById('main')
 ```js
 $('div')
 ```
-
 ```js
 document.getElementsByTagName('div')
 ```
+
+
+```
+
+---
 
 classで取得
 
@@ -151,8 +152,16 @@ $('.main')
 ```js
 document.getElementsByClassName('main')
 ```
-
 ---
+
+### jQueryに頼らない
+---
+
+### jQueryに頼らない
+---
+
+### jQueryに頼らない
+
 
 
 ### おわり
