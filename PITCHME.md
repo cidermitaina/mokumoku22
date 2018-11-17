@@ -32,7 +32,7 @@
 var scope = "Global" 　//グローバル変数
 
 function getValue() {
-  var scope = "local Variable";　//ローカル変数
+  var scope = "Local Variable";　//ローカル変数
   return scope;
 }
 ```
