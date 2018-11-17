@@ -43,10 +43,75 @@ function getValue() {
 
 ---
 
-### jQueryに頼らない
+### ローカル変数の有効範囲は？
 
-- よく使われるjQueryをいくつかpick　up
-- 同等の機能を使って実現する生のJavaScriptを書く
+```js
+
+var scope = "Global" 　
+
+function getValue() {
+  console.log(scope) 
+  var scope = "local Variable";
+  return scope;
+  
+}
+```
+##### Q.console.logの値は？
+
+---
+
+### 答え
+
+##### A.未定義
+
+###### なぜ？
+
+javascriptではローカル変数は「関数全体で有効」
+`console.log(scope)`の時点ではローカル変数scopeが有効になっているが、ローカル変数が確保されているだけで、var命令は実行されていない。
+
+つまり`未定義`
+
+このような挙動が不具合の原因となるので避けるべき...！
+
+###### どうする？
+ローカル変数は関数の銭湯で宣言する
+
+
+##### Q.console.logの値は？
+
+---
+
+### ローカル変数の有効範囲は？
+
+```js
+
+var scope = "Global" 　
+
+function getValue() {
+  console.log(scope) 
+  var scope = "local Variable";
+  return scope;
+  
+}
+```
+##### Q.console.logの値は？
+
+---
+
+### ローカル変数の有効範囲は？
+
+```js
+
+var scope = "Global" 　
+
+function getValue() {
+  console.log(scope) 
+  var scope = "local Variable";
+  return scope;
+  
+}
+```
+##### Q.console.logの値は？
 
 ---
 
