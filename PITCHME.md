@@ -139,9 +139,6 @@ $('div')
 document.getElementsByTagName('div')
 ```
 
-
-```
-
 ---
 
 classで取得
@@ -154,14 +151,81 @@ document.getElementsByClassName('main')
 ```
 ---
 
-### jQueryに頼らない
+##### DOMのready状態の確認
+
+```js
+$(document).ready(function(){ 
+  
+});
+
+$(function(){
+
+});
+
+```
+
+```js
+document.addEventListener("DOMContentLoaded",function(){ 
+
+});
+```
+
 ---
 
-### jQueryに頼らない
+##### 要素のクラス操作
+
+```js
+$(".item").addClass("new-class");
+
+$(".item").removeClass("new-class");
+
+$(".item").toggleClass("new-class");
+
+```
+
+```js
+var item = document. querySelector(". item");
+
+item.classList.add("new-class");
+item.classList.remove("new-class");
+item.classList.toggle("new-class");
+```
+
 ---
 
-### jQueryに頼らない
+##### CSS操作
+
+```js
+$(".item").css("font-size", "1.5rem");
+```
+
+```js
+var item = document.querySelector(".item");
+
+item.style.fontSize = "24px";
+```
+
+---
+
+##### 要素の表示と非表示
+
+```js
+$(".item").show();
+```
+
+```js
+document.querySelector(".item").style.display = "block";
+```
 
 
+```js
+$(".item").hide();
+```
+
+```js
+document.querySelector(".item").style.display = "none";
+```
+
+---
 
 ### おわり
