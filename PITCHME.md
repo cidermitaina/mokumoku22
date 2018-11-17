@@ -47,7 +47,7 @@ var scope = "Global" 　
 
 function getValue() {
   console.log(scope) 
-  var scope = "local Variable";
+  var scope = "Local Variable";
   return scope;
 }
 ```
